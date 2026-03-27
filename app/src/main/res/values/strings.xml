@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">CityGuide</string>
+    <string name="profile_title">Профиль пользователя</string>
+    <string name="profile_photo">Фото профиля</string>
+    <string name="profile_phone">Номер: </string>
+    <string name="profile_photo_hint">Нажмите на иконку, чтобы добавить фото</string>
+
+    <string name="hint_phone">Номер телефона</string>
+    <string name="hint_password">Пароль</string>
+    <string name="hint_confirm_password">Подтвердите пароль</string>
+
+    <string name="btn_login">ВОЙТИ</string>
+    <string name="btn_register">ЗАРЕГИСТРИРОВАТЬСЯ</string>
+
+    <string name="avatar_cat">Котик</string>
+    <string name="avatar_dog">Собака</string>
+    <string name="avatar_bird">Птичка</string>
+    <string name="avatar_fish">Рыбка</string>
+    <string name="avatar_rabbit">Кролик</string>
+    <string name="choose_avatar">Выберите аватар</string>
 </resources>
