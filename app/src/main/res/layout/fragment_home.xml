@@ -22,4 +22,14 @@
         android:gravity="center"
         android:layout_marginTop="16dp"/>
 
+    <Button
+        android:id="@+id/btnAttractions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📍 Каталог достопримечательностей"
+        android:backgroundTint="@color/purple_500"
+        android:layout_marginTop="24dp"
+        android:padding="16dp"
+        android:textSize="16sp"/>
+
 </LinearLayout>

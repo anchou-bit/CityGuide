@@ -5,21 +5,28 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.example.cityguide.ui.home.HomeFragment;
 import com.example.cityguide.ui.map.MapFragment;
 import com.example.cityguide.ui.favorites.FavoritesFragment;
 import com.example.cityguide.ui.profile.ProfileFragment;
+import com.example.cityguide.ui.attractions.AttractionListFragment;
+import com.example.cityguide.ui.attractions.AddEditAttractionFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
+    private FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        fragmentManager = getSupportFragmentManager();
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         // Устанавливаем начальный фрагмент
@@ -47,10 +54,17 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
+    // 🔹 Публичный метод для загрузки фрагментов (используется из HomeFragment)
+    public void loadAttractionFragment(Fragment fragment) {
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment);
+        transaction.addToBackStack(null); // 🔹 Добавляем в стек для возврата назад
+        transaction.commit();
+    }
+
     private boolean loadFragment(Fragment fragment) {
         if (fragment != null) {
-            getSupportFragmentManager()
-                    .beginTransaction()
+            fragmentManager.beginTransaction()
                     .replace(R.id.fragment_container, fragment)
                     .commit();
             return true;
@@ -58,4 +72,3 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 }
-// Added by Victoria
