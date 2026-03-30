@@ -1,61 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/navigation_home">
+    android:id="@+id/nav_graph">
 
-    <!-- 🏠 Главная страница -->
-    <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.cityguide.ui.home.HomeFragment"
-        android:label="Главная"
-        tools:layout="@layout/fragment_home">
-
-        <!-- Переход к каталогу достопримечательностей -->
-        <action
-            android:id="@+id/action_home_to_attractionList"
-            app:destination="@id/attractionListFragment"/>
-    </fragment>
-
-    <!-- 📍 Каталог достопримечательностей -->
-    <fragment
-        android:id="@+id/attractionListFragment"
-        android:name="com.example.cityguide.ui.attractions.AttractionListFragment"
-        android:label="Достопримечательности"
-        tools:layout="@layout/fragment_attraction_list">
-
-        <action
-            android:id="@+id/action_attractionListFragment_to_addEditAttractionFragment"
-            app:destination="@id/addEditAttractionFragment"/>
-    </fragment>
-
-    <!-- ✏️ Добавление/редактирование -->
-    <fragment
-        android:id="@+id/addEditAttractionFragment"
-        android:name="com.example.cityguide.ui.attractions.AddEditAttractionFragment"
-        android:label="Добавить/Редактировать"
-        tools:layout="@layout/fragment_add_edit_attraction"/>
-
-    <!-- 🗺️ Карта -->
-    <fragment
-        android:id="@+id/navigation_map"
-        android:name="com.example.cityguide.ui.map.MapFragment"
-        android:label="Карта"
-        tools:layout="@layout/fragment_map"/>
-
-    <!-- ❤️ Избранное -->
-    <fragment
-        android:id="@+id/navigation_favorites"
-        android:name="com.example.cityguide.ui.favorites.FavoritesFragment"
-        android:label="Избранное"
-        tools:layout="@layout/fragment_favorites"/>
-
-    <!-- 👤 Профиль -->
-    <fragment
-        android:id="@+id/navigation_profile"
-        android:name="com.example.cityguide.ui.profile.ProfileFragment"
-        android:label="Профиль"
-        tools:layout="@layout/fragment_profile"/>
+    <!-- Пустой граф, так как не используем Navigation Component -->
 
 </navigation>
